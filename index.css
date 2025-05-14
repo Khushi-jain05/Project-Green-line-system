@@ -1,0 +1,84 @@
+nav,
+.nav-links {
+display: flex;
+
+}
+a{
+    color: white;
+    text-decoration: none;
+    
+}
+nav {
+justify-content: space-around;
+align-items: center;
+height: 10vh;
+position: sticky;
+top: 0;
+left: 0;
+/* z-index: 100; */
+background-color: rgb(14, 41, 27);
+
+}
+
+.nav-links {
+gap: 2rem;
+list-style: none;
+font-size: 1.5rem;
+
+}
+
+*{
+margin: 0;
+
+}
+body{
+    background-color: rgba(198, 222, 210, 0.784);
+}
+.logo-img{
+    width: 80px;
+    transform: scale(0);
+    opacity: 0;
+    animation: zoomInOut 1.5s ease-out forwards;
+    
+}
+@keyframes zoomInOut {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2); 
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1); 
+        opacity: 1;
+    }
+}
+.title{
+    display: flex;
+    gap:4rem;
+    align-items: center;
+    font-size: 34px;
+    color: white;
+}
+a:hover{
+color: rgb(158, 163, 159);
+}
+.btn-1 {
+    background-color: rgb(255, 255, 255);
+    color: rgb(14, 41, 27);
+    border: 1px solid transparent;  /* <-- FIXED */
+    padding: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.btn-1:hover {
+    background-color: rgb(14, 41, 27);
+    color: white;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid white;  /* same size border, just color change */
+}
+
