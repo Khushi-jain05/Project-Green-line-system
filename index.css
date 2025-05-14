@@ -12,7 +12,7 @@ nav {
 justify-content: space-around;
 align-items: center;
 height: 10vh;
-position: sticky;
+/* position: sticky; */
 top: 0;
 left: 0;
 /* z-index: 100; */
@@ -33,6 +33,9 @@ margin: 0;
 }
 body{
     background-color: rgba(198, 222, 210, 0.784);
+    
+       
+    
 }
 .logo-img{
     width: 80px;
@@ -82,3 +85,95 @@ color: rgb(158, 163, 159);
     border: 1px solid white;  /* same size border, just color change */
 }
 
+.slider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width:100%;
+   
+   
+}
+.info{
+    margin-top: 30px;
+    text-align: center;
+    color: rgb(14, 41, 27);
+}
+p{
+    font-size: 17px;
+   
+    margin-top: 10px;
+    color: rgb(14, 41, 27);
+    
+}
+
+/* .slider-img{
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px rgba(76, 75, 75, 0.69);
+    width: 100%;
+    animation: zoom-in-out 5s ease-in-out infinite;
+    transition: transform 0.3s ease-in-out;
+}
+@keyframes zoom-in-out {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  } */
+.heading{
+    font-size: 30px;
+    color: rgb(14, 41, 27);
+    text-align: center;
+    margin-top: 10vh;
+  
+    opacity: 0;
+  animation: fade-slide-up 1s ease-out forwards;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  
+}
+@keyframes fade-slide-up {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+@keyframes zoom-in-out {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+  
+  .slider-img {
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px rgba(76, 75, 75, 0.69);
+    width:75%;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 1s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  .slider-img.active {
+    opacity: 1;
+    animation: zoom-in-out 5s ease-in-out infinite;
+  }
+  
+  .slider-img:hover {
+    transform: scale(1.15);
+  }
+.left{
+    background-color: rgb(158, 163, 159);
+}
+.about-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(158, 163, 159, 0.373);
+    width: 100%;
+    height: 400px;
+    padding-left: 40px;
+    
+} 
