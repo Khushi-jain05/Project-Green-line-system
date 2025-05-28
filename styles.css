@@ -305,8 +305,10 @@ a:hover {
 
 .media-box {
   display: inline-flex;
-  animation: marqueeScroll 15s linear infinite;
+  animation: marqueeScroll 10s linear infinite;
   padding: 0 10px;
+  /* white-space: nowrap; */
+  width: max-content;;
 }
 
 .media-box-img {
@@ -319,15 +321,32 @@ a:hover {
   height: auto;
 }
 
-@keyframes marqueeScroll {
+/* @keyframes marqueeScroll {
   0% {
       transform: translateX(0);
   }
   100% {
       transform: translateX(calc(-50% - 10px));
   }
+} */
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
+@media (max-width: 768px) {
+  .media-box-img {
+    max-width: 200px; /* Reduce size for mobile */
+  }
 
+  .media-box {
+    overflow-x: auto;  /* Let it scroll manually if animation breaks */
+       /* Fallback: remove animation on mobile if needed */
+  }
+}
 .youtube-vdo {
   display: flex;
   flex-wrap: wrap;
